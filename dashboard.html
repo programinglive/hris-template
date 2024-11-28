@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - HRIS Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Courier', monospace;
+        }
+        /* Retro Button Style */
+        .retro-btn {
+            background-color: #222222;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease, border 0.3s ease;
+        }
+
+        .retro-btn:hover {
+            background-color: #fff;
+            color: #222222;
+            border: 2px solid #222222;
+        }
+
+        /* Hover effect for links inside button */
+        .retro-btn a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .card {
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Dashboard Container -->
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 p-6">
+            <h2 class="text-2xl font-bold mb-8">HRIS Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" class="block py-2 px-4 mb-4 text-lg hover:bg-gray-700 rounded-lg">Dashboard</a></li>
+                    <li><a href="employees.html" class="block py-2 px-4 mb-4 text-lg hover:bg-gray-700 rounded-lg">Employee Management</a></li>
+                    <li><a href="attendance.html" class="block py-2 px-4 mb-4 text-lg hover:bg-gray-700 rounded-lg">Attendance Tracking</a></li>
+                    <li><a href="payroll.html" class="block py-2 px-4 mb-4 text-lg hover:bg-gray-700 rounded-lg">Payroll Management</a></li>
+                    <li><a href="settings.html" class="block py-2 px-4 mb-4 text-lg hover:bg-gray-700 rounded-lg">Settings</a></li>
+                    <li><a href="logout.html" class="block py-2 px-4 mb-4 text-lg hover:bg-gray-700 rounded-lg">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <!-- Welcome Section -->
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold">Welcome Back, Company Name!</h1>
+                <p class="text-lg text-gray-400 mt-2">Here's a quick overview of your company's HRIS dashboard.</p>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Employee Management Card -->
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Employee Management</h3>
+                    <p class="text-sm text-gray-400">Manage employees, their profiles, and employment details.</p>
+                    <a href="employees.html" class="retro-btn mt-4">Go to Employees</a>
+                </div>
+
+                <!-- Attendance Tracking Card -->
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Attendance Tracking</h3>
+                    <p class="text-sm text-gray-400">Track employee attendance and generate reports.</p>
+                    <a href="attendance.html" class="retro-btn mt-4">Go to Attendance</a>
+                </div>
+
+                <!-- Payroll Management Card -->
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Payroll Management</h3>
+                    <p class="text-sm text-gray-400">Manage payroll, deductions, and generate payslips.</p>
+                    <a href="payroll.html" class="retro-btn mt-4">Go to Payroll</a>
+                </div>
+            </div>
+
+            <!-- Quick Stats Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Total Employees</h3>
+                    <p class="text-3xl font-semibold">100</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Total Attendance</h3>
+                    <p class="text-3xl font-semibold">98%</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Total Payroll Processed</h3>
+                    <p class="text-3xl font-semibold">$100,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
